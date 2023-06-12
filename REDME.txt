@@ -1,0 +1,17 @@
+Project Description:
+  A customized shell has been built and designed using lex, yacc and C.
+  Lex : Lex part of the program initializes regex definition of the bash
+  command line such as ls -al. Based of the matched regex, tokens are
+  returned. yylex() is the entry point of the lexiacal analysis of the program.
+  
+  Yacc: bottom up parsing method has been appiled in the parser to match the
+  syntax of the given command line input. Based on the matched grammer, a
+  table of commands has been generated to store the commands, options or
+  arguments.  THE Executor which is written in C will read from the table and
+  exeute the command by using fork(), exec(). The parser is able to handle
+  complex program that includes PIPE and file input and output. 
+
+  Future Goal:
+    1. Include Buil-in commands support system
+    2. Fix issues with redirecting to stderr.
+    3. Probably inclue wildcard support. 
